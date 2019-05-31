@@ -26,7 +26,18 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-        this.setState({ starwarsChars: data.results });
+        console.log(data.next)
+        this.setState(prevState => {
+          return { 
+            starwarsChars: prevState.starwarsChars.concat(data.results)
+          }
+        },
+        () => {
+          if (data.next) {
+            this.getCharacters(data.next)
+          }
+        }
+        );
       })
       .catch(err => {
         throw new Error(err);
@@ -34,7 +45,6 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state.starwarsChars);
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
