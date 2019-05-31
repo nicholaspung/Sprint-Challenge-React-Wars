@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 
 import CharacterList from './components/CharacterList';
-import Character from './components/Character';
+
+import 'materialize-css/dist/css/materialize.min.css';
 
 class App extends Component {
   constructor() {
