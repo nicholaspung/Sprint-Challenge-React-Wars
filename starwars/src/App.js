@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import CharacterList from './components/CharacterList';
+
+import 'materialize-css/dist/css/materialize.min.css';
+
 class App extends Component {
   constructor() {
     super();
@@ -22,7 +26,18 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-        this.setState({ starwarsChars: data.results });
+        console.log(data.next)
+        this.setState(prevState => {
+          return { 
+            starwarsChars: prevState.starwarsChars.concat(data.results)
+          }
+        },
+        () => {
+          if (data.next) {
+            this.getCharacters(data.next)
+          }
+        }
+        );
       })
       .catch(err => {
         throw new Error(err);
@@ -33,6 +48,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
+        <CharacterList starwarsCharsList={this.state.starwarsChars} />
       </div>
     );
   }

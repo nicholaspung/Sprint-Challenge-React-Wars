@@ -89,24 +89,24 @@ Your data set will look like this:
 
 Your finished project must include all of the following requirements:
 
-- [ ] A list of Star Wars Characters rendered to the screen.
-- [ ] You must have at least one list element for each star wars character in the data set.
-- [ ] The list elements must all be minimally styled. (Don't rely on browser default styles.)
+- [x] A list of Star Wars Characters rendered to the screen.
+- [x] You must have at least one list element for each star wars character in the data set.
+- [x] The list elements must all be minimally styled. (Don't rely on browser default styles.)
 
 Required best practices:
 
-- [ ] Consistent naming. Examples: variables, functions, classes, and files.
-- [ ] Consistent spacing. Examples: line breaks, around arguments and before/after functions.
-- [ ] Consistent quotation usage.
-- [ ] Spell-check.
-- [ ] Schedule time to review, refine and reassess your work.
+- [x] Consistent naming. Examples: variables, functions, classes, and files.
+- [x] Consistent spacing. Examples: line breaks, around arguments and before/after functions.
+- [x] Consistent quotation usage.
+- [x] Spell-check.
+- [x] Schedule time to review, refine and reassess your work.
 
 
 It is better to submit a challenge that meets [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) than one that attempts too much and fails.
 
 ## Stretch Problems
 
-- [ ] Build a pagination system that will allow you to load the next page of data
+- [x] Build a pagination system that will allow you to load the next page of data
 
 - Take note on the data that's coming back from the server call in our `getCharacters()`.
 - console.log() the data coming back from the server.
@@ -120,7 +120,7 @@ It is better to submit a challenge that meets [MVP](https://en.wikipedia.org/wik
   })
 ```
 
-- [ ] Build another app from scratch that looks very similar to this one. Inside of your main `App` component fetch some data in this same fashion from this url `https://dog.ceo/dog-api/#all` you'll have to follow the documentation at that website and figure out how to change up the code you've seen here in this Star Wars app in order to properly fetch the data and store it on Component State.
+- [x] Build another app from scratch that looks very similar to this one. Inside of your main `App` component fetch some data in this same fashion from this url `https://dog.ceo/dog-api/#all` you'll have to follow the documentation at that website and figure out how to change up the code you've seen here in this Star Wars app in order to properly fetch the data and store it on Component State.
 
 - Be mindful of the `fetch API` that is now built into most modern browsers [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
 - Your data coming back from Dogs should be formatted in JSON format.
